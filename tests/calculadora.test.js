@@ -26,7 +26,7 @@ describe('Pruebas para la Calculadora', () => {
   it('debería multiplicar dos números correctamente', () => {
     expect(multiplicar(3, 4)).toBe(12);
     expect(multiplicar(-2, 5)).toBe(-10);
-    expect(multiplicar(0, 100)).toBe(1);
+    expect(multiplicar(0, 100)).toBe(0);
   });
 
 });
