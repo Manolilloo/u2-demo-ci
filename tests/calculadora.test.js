@@ -14,6 +14,10 @@ describe('Pruebas para la Calculadora', () => {
     expect(sumar(2, 2)).toBe(4);
     expect(sumar(10, -5)).toBe(5);
     expect(sumar(0, 0)).toBe(0);
+
+    expect(restar(5, 3)).toBe(2);
+    expect(restar(10, 10)).toBe(0);
+    expect(restar(-5, -5)).toBe(0);
   });
 
 });
