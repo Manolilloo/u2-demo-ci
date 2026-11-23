@@ -1,6 +1,6 @@
 // Importamos solo lo que necesitamos testear
 // ¡Actualizado para incluir 'restar'!
-const { sumar, restar } = require('../src/calculadora');
+const { sumar, restar, multiplicar } = require('../src/calculadora');
 
 // 'describe' agrupa tests relacionados. Es bueno para organizar.
 describe('Pruebas para la Calculadora', () => {
@@ -15,9 +15,18 @@ describe('Pruebas para la Calculadora', () => {
     expect(sumar(10, -5)).toBe(5);
     expect(sumar(0, 0)).toBe(0);
 
+  });
+
+  it('debería restar dos números correctamente', () => {
     expect(restar(5, 3)).toBe(2);
-    expect(restar(10, 10)).toBe(0);
-    expect(restar(-5, -5)).toBe(0);
+    expect(restar(10, 15)).toBe(-5);
+    expect(restar(0, 0)).toBe(0);
+  });
+
+  it('debería multiplicar dos números correctamente', () => {
+    expect(multiplicar(3, 4)).toBe(12);
+    expect(multiplicar(-2, 5)).toBe(-10);
+    expect(multiplicar(0, 100)).toBe(1);
   });
 
 });
